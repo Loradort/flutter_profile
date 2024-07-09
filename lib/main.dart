@@ -38,88 +38,159 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: [
           Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: 50,
-                horizontal: 0,
-              ),
-              color: Colors.blue,
-              child: Column(
-                children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.searchengin,
-                        color: Color.fromARGB(255, 6, 6, 6),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Icon(
-                        FontAwesomeIcons.solidMessage,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Icon(
-                        FontAwesomeIcons.house,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Icon(
-                        FontAwesomeIcons.gear,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      ClipOval(
+            padding: const EdgeInsets.symmetric(
+              vertical: 60,
+              horizontal: 0,
+            ),
+            child: Column(
+              children: [
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.searchengin,
+                      color: Color.fromARGB(255, 6, 6, 6),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      FontAwesomeIcons.solidMessage,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      FontAwesomeIcons.house,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Icon(
+                      FontAwesomeIcons.gear,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    ClipOval(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                        ),
                         child: Image.network(
                           'https://i.pinimg.com/564x/c0/b3/96/c0b396ec660f870d024604c66e2793ca.jpg',
                           width: 100,
                           height: 100,
                         ),
                       ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Pawarit Jithan",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Pawarit Jithan",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
                           ),
-                          Text(
-                            "The MasterBaiter",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            ),
+                        ),
+                        Text(
+                          "Computer Sciences",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontSize: 18,
                           ),
-                          Text(
-                            "ผู้ติตตาม 1M | กำลังติดตาม 0",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
+                        ),
+                        Text(
+                          "ผู้ติตตาม 1M | กำลังติดตาม 0",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
                           ),
-                        ],
-                      ),
-                    ],
-                  )
-                ],
-              )),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(FontAwesomeIcons.teamspeak),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "ความสามารถ",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("Hard Skills"),
+                        Text("Soft Skills"),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("1.Canva"),
+                        Text("1.Speak"),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("2.Draw"),
+                        Text("2.Sing"),
+                      ],
+                    ),
+                  ],
+                ),
+                const Column(
+                  children: [
+                    Icon(FontAwesomeIcons.hatCowboy),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "ประวัติการศึกษา",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("การศึกษาขั้นพื้นฐาน"),
+                        Text("สำเร็จการศึกษา"),
+                        Text("โรงเรียนบ้านกระโพ"),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
