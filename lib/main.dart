@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profiles/about.dart';
+import 'package:flutter_profiles/drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -35,6 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Me"),
+      ),
+      drawer: const MyDrawer(),
       body: Column(
         children: [
           Container(
@@ -187,7 +194,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   ],
-                )
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Get.to(const AboutPage());
+                  },
+                  child: const Text('Butthole'),
+                ),
               ],
             ),
           ),
