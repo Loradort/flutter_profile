@@ -12,26 +12,28 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-//  var items = 
+  var items = List<String>.generate(100, (i) => 'Item $i');
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "data",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-              ],
-            )
-          ],
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("about"),
         ),
-      ),
-    );
+        drawer: const Drawer(),
+        body: ListView.builder(
+          itemCount: items.length,
+          prototypeItem: ListTile(
+            title: Text(items.first),
+          ),
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: const Icon(Icons.add),
+              title: Text(items[index]),
+              subtitle: const Text("Computer"),
+              trailing: const Icon(Icons.check),
+            );
+          },
+        ));
   }
 }
