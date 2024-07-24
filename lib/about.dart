@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profiles/main.dart';
 import 'package:get/get.dart';
-
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:getwidget/components/list_tile/gf_list_tile.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -23,15 +21,22 @@ class _AboutPageState extends State<AboutPage> {
         drawer: const Drawer(),
         body: ListView.builder(
           itemCount: items.length,
-          prototypeItem: ListTile(
-            title: Text(items.first),
-          ),
           itemBuilder: (context, index) {
-            return ListTile(
-              leading: const Icon(Icons.add),
-              title: Text(items[index]),
-              subtitle: const Text("Computer"),
-              trailing: const Icon(Icons.check),
+            return Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.grey,
+                  width: 1.0,
+                ),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              margin:
+                  const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+              child: const GFListTile(
+                titleText: "hello",
+                subTitleText: "computer",
+                icon: Icon(Icons.favorite),
+              ),
             );
           },
         ));

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profiles/about.dart';
+import 'package:flutter_profiles/botton_sheet.dart';
+import 'package:get/get.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -25,16 +28,17 @@ class _MyDrawerState extends State<MyDrawer> {
             child: Text('Drawer Header'),
           ),
           ListTile(
-            title: const Text('Item 1'),
+            title: const Text('About'),
             onTap: () {
+              Get.to(const AboutPage());
               // Update the state of the app.
               // ...
             },
           ),
           ListTile(
-            title: const Text('Item 2'),
+            title: const Text('My Botton Sheet'),
             onTap: () {
-              // Update the state of the app.
+              Get.to(const MyBottonSheet()); // Update the state of the app.
               // ...
             },
           ),

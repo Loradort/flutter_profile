@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Text(
-                          "ผู้ติตตาม 1M | กำลังติดตาม 0",
+                          "ผู้ติตตาม 1M | กำลังติดตาม 1M",
                           style: TextStyle(
                             color: Color.fromARGB(255, 0, 0, 0),
                           ),
