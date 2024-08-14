@@ -36,7 +36,3 @@ class _SheetContentState extends State<SheetContent> {
     );
   }
 }
-
-void main() {
-  runApp(const MaterialApp(home: SheetContent()));
-}
